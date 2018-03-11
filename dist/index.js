@@ -22,6 +22,10 @@ var Definitions;
             {
                 name: "httpBody",
                 type: "string",
+            },
+            {
+                name: "httpQueryParams",
+                type: "string",
             }
         ],
     };
