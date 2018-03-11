@@ -11,6 +11,10 @@ var Definitions;
                 type: "string",
             },
             {
+                name: "callbackQueueName",
+                type: "string"
+            },
+            {
                 name: "enqueuedAt",
                 type: "long"
             },
