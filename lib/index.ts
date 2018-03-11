@@ -1,4 +1,4 @@
-export const Beacon = {
+const Beacon = {
   namespace: "avro",
   protocol: "Beacon",
   types: [
@@ -102,3 +102,5 @@ export const Beacon = {
     },
   },
 };
+
+export {Beacon}

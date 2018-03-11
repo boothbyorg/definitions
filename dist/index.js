@@ -1,6 +1,6 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.Beacon = {
+var Beacon = {
     namespace: "avro",
     protocol: "Beacon",
     types: [
@@ -104,3 +104,4 @@ exports.Beacon = {
         },
     },
 };
+exports.Beacon = Beacon;
