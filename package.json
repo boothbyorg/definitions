@@ -1,0 +1,24 @@
+{
+  "name": "boothby-definitions",
+  "version": "0.0.1",
+  "description": "Avro files shared by boothby deflector/grappler.",
+  "main": "dist/index.js",
+  "scripts": {
+    "build": "tsc"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/boothbyorg/definitions.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/boothbyorg/definitions/issues"
+  },
+  "homepage": "https://github.com/boothbyorg/definitions#readme",
+  "dependencies": {
+    "@types/node": "^9.4.7",
+    "tslint": "^5.9.1",
+    "typescript": "^2.7.2"
+  }
+}
