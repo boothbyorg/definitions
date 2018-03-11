@@ -8,6 +8,14 @@ export namespace Definitions {
         type: "string",
       },
       {
+        name: "enqueuedAt",
+        type: "long"
+      },
+      {
+        name: "expiresAt",
+        type: "long"
+      },
+      {
         name: "httpMethod",
         type: "string",
       },
