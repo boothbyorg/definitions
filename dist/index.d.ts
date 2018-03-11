@@ -1,4 +1,4 @@
-declare const Beacon: {
+export declare const Beacon: {
     namespace: string;
     protocol: string;
     types: ({

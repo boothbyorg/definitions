@@ -1,4 +1,4 @@
-const Beacon = {
+export const Beacon = {
   namespace: "avro",
   protocol: "Beacon",
   types: [
@@ -101,8 +101,4 @@ const Beacon = {
       response: "LambdaResponse",
     },
   },
-};
-
-module.exports = {
-  'Beacon': Beacon
 };
