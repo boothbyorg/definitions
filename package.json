@@ -1,6 +1,6 @@
 {
   "name": "boothby-definitions",
-  "version": "0.0.3",
+  "version": "0.0.5",
   "description": "Avro files shared by boothby deflector/grappler.",
   "main": "dist/index.js",
   "scripts": {
@@ -13,7 +13,6 @@
   "author": "",
   "types" : "dist/index.d.ts",
   "license": "ISC",
-  "types" : "dist/index.d.ts",
   "bugs": {
     "url": "https://github.com/boothbyorg/definitions/issues"
   },
