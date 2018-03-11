@@ -11,6 +11,7 @@
     "url": "git+https://github.com/boothbyorg/definitions.git"
   },
   "author": "",
+  "types" : "dist/index.d.ts",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/boothbyorg/definitions/issues"
