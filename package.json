@@ -1,6 +1,6 @@
 {
   "name": "boothby-definitions",
-  "version": "0.0.11",
+  "version": "0.0.12",
   "description": "Avro files shared by boothby deflector/grappler.",
   "main": "dist/index.js",
   "scripts": {

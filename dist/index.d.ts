@@ -99,6 +99,25 @@ export declare namespace Definitions {
             default: string;
         })[];
     };
+    const GrapplerResponse: {
+        type: string;
+        fields: ({
+            name: string;
+            type: string;
+            default?: undefined;
+        } | {
+            name: string;
+            type: {
+                type: string;
+                values: string;
+            };
+            default: {};
+        } | {
+            name: string;
+            type: string;
+            default: string;
+        })[];
+    };
     const Beacon: {
         namespace: string;
         protocol: string;
