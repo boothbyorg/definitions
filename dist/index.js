@@ -34,10 +34,12 @@ var Definitions;
             {
                 name: "httpBody",
                 type: "string",
+                default: ""
             },
             {
                 name: "httpQueryParams",
                 type: "string",
+                default: ""
             }
         ],
     };

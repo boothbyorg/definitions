@@ -31,13 +31,16 @@ export namespace Definitions {
       {
         name: "httpBody",
         type: "string",
+        default: ""
       },
       {
         name: "httpQueryParams",
         type: "string",
+        default: ""
       }
     ],
   };
+
 
   export const LogMessage = {
     name: "LogMessage",
@@ -110,11 +113,17 @@ export namespace Definitions {
     [key: string]: string;
   }
 
+  /**
+   * This maps to the Avro GrapplerRequest Type.
+   */
   export interface ILambdaRequest {
-    requestId: string,
-    httpMethod: string,
-    httpParams: IHttpHeaders,
-    httpBody: string
+    requestId: string;
+    httpMethod: "GET" | "POST" | "PUT" | "PATCH" | "DELETE";
+    httpParams?: object;
+    httpBody: string;
+    enqueuedAt: number;
+    expiresAt: number;
+    callbackQueueName: string;
   };
 
   export const GrapplerRequest = {

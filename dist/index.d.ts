@@ -13,6 +13,10 @@ export declare namespace Definitions {
                 values: string;
             };
             default: {};
+        } | {
+            name: string;
+            type: string;
+            default: string;
         })[];
     };
     const LogMessage: {
@@ -64,11 +68,17 @@ export declare namespace Definitions {
     interface IHttpHeaders {
         [key: string]: string;
     }
+    /**
+     * This maps to the Avro GrapplerRequest Type.
+     */
     interface ILambdaRequest {
         requestId: string;
-        httpMethod: string;
-        httpParams: IHttpHeaders;
+        httpMethod: "GET" | "POST" | "PUT" | "PATCH" | "DELETE";
+        httpParams?: object;
         httpBody: string;
+        enqueuedAt: number;
+        expiresAt: number;
+        callbackQueueName: string;
     }
     const GrapplerRequest: {
         type: string;
@@ -83,12 +93,35 @@ export declare namespace Definitions {
                 values: string;
             };
             default: {};
+        } | {
+            name: string;
+            type: string;
+            default: string;
         })[];
     };
     const Beacon: {
         namespace: string;
         protocol: string;
         types: ({
+            name: string;
+            type: string;
+            fields: ({
+                name: string;
+                type: string;
+                default?: undefined;
+            } | {
+                name: string;
+                type: {
+                    type: string;
+                    values: string;
+                };
+                default: {};
+            } | {
+                name: string;
+                type: string;
+                default: string;
+            })[];
+        } | {
             name: string;
             type: string;
             fields: ({
