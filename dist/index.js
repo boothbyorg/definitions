@@ -66,6 +66,10 @@ var Definitions;
         type: "record",
         fields: [
             {
+                name: "requestId",
+                type: "string",
+            },
+            {
                 name: "statusCode",
                 type: "int",
                 default: 200,
@@ -78,6 +82,7 @@ var Definitions;
             {
                 name: "body",
                 type: "string",
+                default: ""
             },
             {
                 name: "isBase64",
@@ -90,10 +95,6 @@ var Definitions;
         name: "LambdaResponse",
         type: "record",
         fields: [
-            {
-                name: "requestId",
-                type: "string",
-            },
             {
                 name: "logs",
                 type: [

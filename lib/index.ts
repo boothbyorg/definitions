@@ -66,6 +66,10 @@ export namespace Definitions {
     type: "record",
     fields: [
       {
+        name: "requestId",
+        type: "string",
+      },
+      {
         name: "statusCode",
         type: "int",
         default: 200,
@@ -78,6 +82,7 @@ export namespace Definitions {
       {
         name: "body",
         type: "string",
+        default: ""
       },
       {
         name: "isBase64",
@@ -91,10 +96,6 @@ export namespace Definitions {
     name: "LambdaResponse",
     type: "record",
     fields: [
-      {
-        name: "requestId",
-        type: "string",
-      },
       {
         name: "logs",
         type: [
@@ -125,6 +126,14 @@ export namespace Definitions {
     expiresAt: number;
     callbackQueueName: string;
   };
+
+  export interface ILambdaResponse {
+    requestId: string,
+    statusCode: number,
+    headers?: IHttpHeaders,
+    body: string,
+    isBase64: boolean
+  }
 
   export const GrapplerRequest = {
     type: 'record',

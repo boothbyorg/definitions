@@ -33,6 +33,10 @@ export declare namespace Definitions {
         fields: ({
             name: string;
             type: string;
+            default?: undefined;
+        } | {
+            name: string;
+            type: string;
             default: number;
         } | {
             name: string;
@@ -44,7 +48,7 @@ export declare namespace Definitions {
         } | {
             name: string;
             type: string;
-            default?: undefined;
+            default: string;
         } | {
             name: string;
             type: string;
@@ -56,13 +60,13 @@ export declare namespace Definitions {
         type: string;
         fields: ({
             name: string;
-            type: string;
-        } | {
-            name: string;
             type: (string | {
                 type: string;
                 items: string;
             })[];
+        } | {
+            name: string;
+            type: string;
         })[];
     };
     interface IHttpHeaders {
@@ -79,6 +83,13 @@ export declare namespace Definitions {
         enqueuedAt: number;
         expiresAt: number;
         callbackQueueName: string;
+    }
+    interface ILambdaResponse {
+        requestId: string;
+        statusCode: number;
+        headers?: IHttpHeaders;
+        body: string;
+        isBase64: boolean;
     }
     const GrapplerRequest: {
         type: string;
@@ -104,6 +115,10 @@ export declare namespace Definitions {
         fields: ({
             name: string;
             type: string;
+            default?: undefined;
+        } | {
+            name: string;
+            type: string;
             default: number;
         } | {
             name: string;
@@ -115,7 +130,7 @@ export declare namespace Definitions {
         } | {
             name: string;
             type: string;
-            default?: undefined;
+            default: string;
         } | {
             name: string;
             type: string;
@@ -134,21 +149,6 @@ export declare namespace Definitions {
                 default?: undefined;
             } | {
                 name: string;
-                type: {
-                    type: string;
-                    values: string;
-                };
-                default: {};
-            } | {
-                name: string;
-                type: string;
-                default: string;
-            })[];
-        } | {
-            name: string;
-            type: string;
-            fields: ({
-                name: string;
                 type: string;
                 default: number;
             } | {
@@ -161,7 +161,7 @@ export declare namespace Definitions {
             } | {
                 name: string;
                 type: string;
-                default?: undefined;
+                default: string;
             } | {
                 name: string;
                 type: string;
@@ -172,13 +172,13 @@ export declare namespace Definitions {
             type: string;
             fields: ({
                 name: string;
-                type: string;
-            } | {
-                name: string;
                 type: (string | {
                     type: string;
                     items: string;
                 })[];
+            } | {
+                name: string;
+                type: string;
             })[];
         })[];
         messages: {
