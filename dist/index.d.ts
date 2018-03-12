@@ -104,18 +104,12 @@ export declare namespace Definitions {
         fields: ({
             name: string;
             type: string;
-            default?: undefined;
         } | {
             name: string;
-            type: {
+            type: (string | {
                 type: string;
-                values: string;
-            };
-            default: {};
-        } | {
-            name: string;
-            type: string;
-            default: string;
+                items: string;
+            })[];
         })[];
     };
     const Beacon: {

@@ -114,7 +114,7 @@ var Definitions;
     };
     Definitions.GrapplerResponse = {
         type: 'record',
-        fields: Definitions.LambdaRequest.fields
+        fields: Definitions.LambdaResponse.fields
     };
     Definitions.Beacon = {
         namespace: "avro",

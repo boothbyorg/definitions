@@ -133,8 +133,8 @@ export namespace Definitions {
 
   export const GrapplerResponse = {
     type: 'record',
-    fields: LambdaRequest.fields
-  }
+    fields: LambdaResponse.fields
+  };
 
   export const Beacon = {
     namespace: "avro",
