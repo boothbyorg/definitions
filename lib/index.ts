@@ -133,7 +133,7 @@ export namespace Definitions {
 
   export const GrapplerResponse = {
     type: 'record',
-    fields: LambdaResponse.fields
+    fields: CallbackData.fields
   };
 
   export const Beacon = {
